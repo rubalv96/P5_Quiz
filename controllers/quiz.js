@@ -1,9 +1,9 @@
-const models = require("../models");
+const models = require("../models/quiz");
 
 
 //GET /quizzes
 exports.index = (req, res, next) =>{
-    const quizzes =models.quiz.findByAll();
+    const quizzes = models.findAll();
     res.render("quizzes/index", {quizzes});
 };
 
