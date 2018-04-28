@@ -20,7 +20,7 @@ exports.show = (req, res, next) =>{
 
 };
 
-//GET /quizzes/new
+/* //GET /quizzes/new
 exports.new = (req, res, next) =>{
    
     
@@ -60,4 +60,4 @@ exports.play = (req, res, next) =>{
 exports.check = (req, res, next) =>{
    
     
-};
+}; */

@@ -19,7 +19,7 @@ router.get('/credits', function(req, res, next){
 
 // Rutas para el recurso /quizzes
 router.get('/quizzes',                      quizController.index);
-router.get('/quizzes/:quizId(\\d+)',        quizController.show);
+/* router.get('/quizzes/:quizId(\\d+)',        quizController.show);
 router.get('/quizzes/new',                  quizController.new );
 router.post('/quizzes',                     quizController.create );
 router.get('/quizzes/:quizId(\\d+)/edit',   quizController.edit );
@@ -28,7 +28,7 @@ router.delete('/quizzes/:quizId(\\d+)',     quizController.destroy );
 
 router.get('/quizzes/:quizId(\\d+)/play',   quizController.play );
 router.get('/quizzes/:quizId(\\d+)/check',  quizController.check );
-
+ */
 
 module.exports = router;
 
