@@ -20,6 +20,7 @@ router.get('/credits', function(req, res, next){
 
 
 
+
 // Rutas para el recurso /quizzes
 router.get('/quizzes',                      quizController.index);
 
