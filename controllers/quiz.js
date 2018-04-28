@@ -3,7 +3,7 @@ const models = require("../models");
 
 //GET /quizzes
 exports.index = (req, res, next) =>{
-    const quizzes = models.quiz.findAll();
+    const quizzes =models.quiz.findByAll();
     res.render("quizzes/index", {quizzes});
 };
 

@@ -29,8 +29,9 @@ exports.update = (quiz) =>{
 
 // Devuelve todos los quiz
 
-exports.findAll=() => quizzes;
-
+exports.findAll =() =>{
+    return quizzes;
+}
 //Busca un quiz por su id
 
 exports.findById=(id) =>{
