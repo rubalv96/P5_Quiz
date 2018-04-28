@@ -4,7 +4,7 @@ const models = require("../models/quiz");
 //GET /quizzes
 exports.index = (req, res, next) =>{
     const quizzes = models.findAll();
-    res.render("quizzes/index", {quizzes});
+    res.render("quizzes/index", {title: 'Autor', quizzes});
 };
 
 //GET /quizzes/:quizId
