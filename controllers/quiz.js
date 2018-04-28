@@ -8,7 +8,7 @@ exports.index = (req, res, next) =>{
 };
 
 //GET /quizzes/:quizId
-exports.show = (req, res, next) =>{
+/* exports.show = (req, res, next) =>{
    const quizId = Number(req.params.quizId);
    const quiz   = models.quiz.findById(quizId);
 
@@ -18,7 +18,7 @@ exports.show = (req, res, next) =>{
        next(new Error('No hay ningún quiz con id= '+ quizId));
    }
 
-};
+}; */
 
 /* //GET /quizzes/new
 exports.new = (req, res, next) =>{
