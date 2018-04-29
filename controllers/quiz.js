@@ -1,10 +1,14 @@
-const models = require("../models/quiz");
+const Sequelize = require("sequelize");
+const {models} = require("../models");
 
 
 //GET /quizzes
 exports.index = (req, res, next) =>{
-    const quizzes = models.findAll();
-    res.render("quizzes/index", {title: 'Autor', quizzes});
+    models.quiz.findAll()
+        .then(quizzes =>{
+            res.render("quizzes/index", {title: 'Preguntas', quizzes});
+
+        })
 };
 
 //GET /quizzes/:quizId

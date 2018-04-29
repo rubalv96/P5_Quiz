@@ -1,5 +1,23 @@
 //Modelo
 
+module.exports = function(sequelize, DataTypes){
+    return sequelize.define('quiz',
+{
+    question:{
+        type: DataTypes.STRING,
+        validate: {notEmpty: {msg: "La pregunta no debe estar vacía."}
+    }},
+
+    answer:{
+        type: DataTypes.STRING,
+        validate: {notEmpty:{msg: "La respuesta no puede estar vacía."}}
+    }
+
+    }
+    );
+
+}
+
 var quizzes=[
     {id: 1,
     question: "Capital de Italia",
