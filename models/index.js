@@ -26,17 +26,13 @@ sequelize.sync()
         Quiz.count().then((count) => {
             if (count === 0){
                 return Quiz.bulkCreate([
-                    {id: 1,
-                    question: "Capital de Italia",
+                    {question: "Capital de Italia",
                     answer: "Roma"},
-                    {id: 2,
-                    question: "Capital de Francia",
+                    {question: "Capital de Francia",
                     answer: "París"},
-                    {id: 3,
-                    question: "Capital de España",
+                    {question: "Capital de España",
                     answer: "Madrid"},
-                    {id: 4,
-                    question: "Capital de Portugal",
+                    {question: "Capital de Portugal",
                     answer: "Lisboa"},
                 ]) 
             }
