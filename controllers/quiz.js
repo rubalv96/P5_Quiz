@@ -2,6 +2,7 @@ const Sequelize = require("sequelize");
 const {models} = require("../models");
 
 
+
 //GET /quizzes
 exports.index = (req, res, next) =>{
     models.quiz.findAll()
