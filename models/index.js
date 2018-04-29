@@ -13,6 +13,19 @@ const sequelize = new Sequelize("sqlite:quiz.sqlite");
 //Importar la definición de la tabla de quiz desde quiz.js
 //var Quiz = sequelize.import(path.join(__dirname,'quiz'));
 //exports.Quiz = Quiz;
+sequelize.define('quiz',
+{
+    question:{
+        type: Sequelize.STRING,
+        validate: {notEmpty: {msg: "La pregunta no debe estar vacía."}
+    }},
+
+    answer:{
+        type: Sequelize.STRING,
+        validate: {notEmpty:{msg: "La respuesta no puede estar vacía."}}
+    }
+
+    });
 
 //Creacion de la tablas
 
@@ -21,9 +34,11 @@ sequelize.sync()
         console.log ('Bases de Datos creadas satisfactoriamente.');
         
     })
-    .then(() => sequelize.models.quiz.count())
+    .then(() => {
+        return sequelize.models.quiz.count();
+    })
     .then((count) =>{
-        if(!count){
+        if(count === 0){
             return sequelize.models.quiz.bulkCreate([
                 { question: "Pregunta Número 1", answer: "hola" },
                 { question: "Capital de Italia", answer: "Roma" },
