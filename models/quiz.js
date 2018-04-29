@@ -1,6 +1,5 @@
 //Modelo
 
-
 module.exports = function(sequelize, DataTypes){
     return sequelize.define('quiz',
 {
@@ -20,7 +19,7 @@ module.exports = function(sequelize, DataTypes){
 
 
 
-//Creacion de un nuevo quiz con el valor pasado
+/* //Creacion de un nuevo quiz con el valor pasado
 
 exports.create =(quiz) =>{
 
@@ -35,7 +34,7 @@ exports.update = (quiz) =>{
 // Devuelve todos los quiz
 
 exports.findAll =() =>{
-    return quizzes;
+    quizzes;
 }
 //Busca un quiz por su id
 
@@ -48,4 +47,4 @@ exports.findById=(id) =>{
 
 exports.destroy = (quiz) =>{
 
-};
+}; */
