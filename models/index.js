@@ -2,6 +2,7 @@ const path = require('path');
 
 
 var quizzes = [
+    { question: "Pregunta Número 1", answer: "hola" },
     { question: "Capital de Italia", answer: "Roma" },
     { question: "Capital de Francia", answer: "París"},
     { question: "Capital de España", answer: "Madrid"},
@@ -31,6 +32,7 @@ sequelize.sync()
         Quiz.count().then((count) => {
             if (count === 0){
                 return Quiz.bulkCreate([
+                { question: "Pregunta Número 1", answer: "hola" },
                 { question: "Capital de Italia", answer: "Roma" },
                 { question: "Capital de Francia", answer: "París"},
                 { question: "Capital de España", answer: "Madrid"},
